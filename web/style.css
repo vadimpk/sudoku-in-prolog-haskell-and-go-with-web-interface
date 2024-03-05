@@ -1,0 +1,139 @@
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+}
+
+#buttons-container {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-bottom: 10px; /* Spacing between buttons */
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 16px; /* Larger font size */
+    font-family: "Titillium Web", sans-serif; /* Modern, sans-serif font */
+    background-color: #007BFF; /* Modern blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    cursor: pointer; /* Cursor changes to a pointer to indicate it's clickable */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover for a subtle effect */
+}
+
+button:disabled {
+    background-color: #CCCCCC; /* Grayed out look for disabled buttons */
+    cursor: not-allowed; /* Cursor indicates the button is not clickable */
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 70px);
+    grid-template-rows: repeat(9, 70px);
+    gap: 0; /* Adjusted to remove the space between cells */
+}
+
+/* Ensure grid and status text are laid out vertically */
+#grid-and-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the children if desired */
+}
+
+#game-status {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.sudoku-cell {
+    width: 70px; /* Match grid-template-columns/rows size */
+    height: 70px; /* Match grid-template-columns/rows size */
+    text-align: center;
+    font-size: 30px;
+    color: 'black';
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity to see behind */
+}
+
+.modal-content {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    position: relative; /* For positioning the close button */
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust based on your preference */
+    border-radius: 10px; /* Round borders */
+    text-align: center; /* Center the buttons and text */
+}
+
+.difficulty-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#trivial-difficulty {
+    background-color: #cacf42;
+}
+
+#easy-difficulty {
+    background-color: #42cf42;
+}
+
+#hard-difficulty {
+    background-color: #fc605d;
+}
+
+/* Style for the exit button */
+#exit-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Extra styling for the exit button to look like a cross */
+#exit-button::before, #exit-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+}
+#exit-button::before {
+    transform: rotate(45deg);
+}
+#exit-button::after {
+    transform: rotate(-45deg);
+}
