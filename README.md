@@ -7,7 +7,7 @@ This project contains implementation of a very famous puzzle game a.k.a "Sudoku"
 - 🗿 Haskell (functional programming)
 
 ### how to run ?
-There is a web interface for visulization of the game (`web/` folder). You can run it using `Live server` extension in VS code (or any other way if you think you're smart).
+There is a web interface for visulization of the game (`web/` folder). You can run it using `Live server` extension in VS code (or any other way if  you're smarter than me).
 
 Web interface connects to any implementation using HTTP, so each implementation (except Haskell🗿) also has a server. To run a server you can use `makefile` like this:
 
